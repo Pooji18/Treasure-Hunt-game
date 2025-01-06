@@ -1,0 +1,77 @@
+Treasure Hunt Game Instructions________________________________________
+Overview
+The Treasure Hunt Game is a text-based adventure project designed to help you learn Python programming. In this game, players navigate through different rooms by making choices. Each choice leads to a new outcome—a win, a loss, or a progression to another room.
+Objectives
+By completing this project, you will:
+•	Learn how to define and use functions in Python 3.
+•	Work with user inputs and outputs using input() and print().
+•	Understand conditional statements (if, elif, else).
+•	Use string manipulation methods like .lower().
+________________________________________
+Game Flow
+1.	Starting Point: The game begins with the player in a dark room. They are prompted to choose between two doors: left (l) or right (r).
+2.	Rooms:
+o	Snake Room: 
+	Prompt: "You see a snake. Type 1 to fight it or 2 to run."
+	Outcome: 
+	If 1, the game ends with a loss.
+	If 2, the player progresses to the Treasure Room.
+o	Monster Room: 
+	Prompt: "A monster blocks your path. Choose 1 to attack or 2 to flee."
+	Outcome: 
+	If 1, the game ends with a loss.
+	If 2, the player progresses to the Treasure Room.
+o	Treasure Room: 
+	Prompt: "Congratulations! You found the treasure. Do you want to play again? (y/n)"
+	Outcome: 
+	If y, the game restarts.
+	If n, the game ends.
+________________________________________
+Required Functions
+Below is the list of functions to implement:
+1.	start():
+o	Initializes the game and asks the player to choose a door.
+o	Leads to either the snake_room() or monster_room().
+2.	snake_room():
+o	Describes the current scenario and takes the player’s input.
+o	Calls game_over() if the player chooses to fight the snake.
+o	Leads to treasure_room() if the player chooses to run.
+3.	monster_room():
+o	Describes the current scenario and takes the player’s input.
+o	Calls game_over() if the player chooses to fight the monster.
+o	Leads to treasure_room() if the player chooses to flee.
+4.	treasure_room():
+o	Congratulates the player and asks if they want to play again.
+o	Calls lets_play_again() or ends the game.
+5.	game_over():
+o	Displays a message indicating that the game has ended.
+o	Asks if the player wants to try again and redirects to lets_play_again().
+6.	lets_play_again():
+o	Restarts the game by calling start() or ends it based on user input.
+________________________________________
+Map Reference
+The game’s flow is structured as follows:
+Start
+  |
+  ├── Left Door → Snake Room → Treasure Room
+  |
+  └── Right Door → Monster Room → Treasure Room
+________________________________________
+Development Instructions
+1.	Create a Python script named treasure_hunt.py.
+2.	Define each function step-by-step.
+3.	Use the map structure to guide the flow of the game.
+4.	Add appropriate print statements to prompt user actions.
+5.	Test the game thoroughly to ensure all scenarios work correctly.
+6.	Include error handling for invalid inputs (e.g., input other than 1, 2, l, r, etc.).
+________________________________________
+Expected Output
+Example scenario:
+You are standing in a dark room. There is a door to your left and right. Which one do you take? (l or r)
+l
+You see a snake. Type 1 to fight it or 2 to run.
+2 You enter a room full of treasures. Congratulations! You win!
+Do you want to play again? (y/n)
+n
+Goodbye!
+
